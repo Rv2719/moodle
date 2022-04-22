@@ -4,21 +4,21 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = getenv('DATABASE_TYPE');
+$CFG->dbtype    = getenv('pgsql');
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = getenv('DATABASE_HOST');
-$CFG->dbname    = getenv('DATABASE_NAME');
-$CFG->dbuser    = getenv('DATABASE_USER');
-$CFG->dbpass    = getenv('DATABASE_PASSWORD');
+$CFG->dbhost    = getenv('ec2-44-199-143-43.compute-1.amazonaws.com');
+$CFG->dbname    = getenv('d9s7ushpa6iukp');
+$CFG->dbuser    = getenv('fjechuqgifaasw');
+$CFG->dbpass    = getenv('8b999700a4231355d18fd83c574f51fcd417ddf44c8434590a91736a4ecfbbf2');
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
-  'dbport' => getenv('DATABASE_PORT'),
+  'dbport' => getenv('5432'),
   'dbsocket' => '',
 );
 
-$CFG->wwwroot   = getenv('WWWROOT');
-$CFG->dataroot  = getenv('DATAROOT');
+$CFG->wwwroot   = getenv('http://tecprog.herokuapp.com/');
+$CFG->dataroot  = getenv('/tmp');
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
